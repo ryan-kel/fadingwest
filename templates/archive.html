@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Archive | Fading West{% endblock %}
+
+{% block content %}
+  <h1>Article Archive</h1>
+  <ul>
+    {% for article in articles %}
+      <li>
+        <h2><a href="{{ article.slug }}.html">{{ article.title }}</a></h2>
+        <p><em>{{ article.date }}</em> — {{ article.summary }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

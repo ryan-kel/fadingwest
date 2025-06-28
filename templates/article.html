@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} | Fading West{% endblock %}
+
+{% block content %}
+  <h1>{{ article.title }}</h1>
+  <p class="meta"><em>{{ article.date }}</em></p>
+  <article>
+    {{ article.content | safe }}
+  </article>
+{% endblock %}

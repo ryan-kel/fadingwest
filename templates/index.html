@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Fading West{% endblock %}
+
+{% block content %}
+  <h1>Welcome to Fading West</h1>
+  <p class="intro">Essays on political thought, cultural memory, and Catholic-informed philosophy.</p>
+  <ul>
+    {% for article in articles %}
+      <li>
+        <h2><a href="/articles/{{ article.slug }}.html">{{ article.title }}</a></h2>
+        <p><em>{{ article.date }}</em> — {{ article.summary }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
