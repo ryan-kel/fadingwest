@@ -10,9 +10,11 @@ from jinja2 import Environment, FileSystemLoader
 
 # ---------- CONFIG ----------
 CONTENT_DIR = "content"
-OUTPUT_DIR = "docs"
+OUTPUT_DIR = "docs"  # formerly "site"
 TEMPLATE_DIR = "templates"
 ARTICLE_OUT_DIR = os.path.join(OUTPUT_DIR, "articles")
+ASSETS_SRC = "assets"
+ASSETS_DEST = os.path.join(OUTPUT_DIR, "assets")
 
 # ---------- INIT ----------
 md = markdown.Markdown(extensions=['meta'])
@@ -56,6 +58,14 @@ def clean_output():
     if os.path.exists(OUTPUT_DIR):
         shutil.rmtree(OUTPUT_DIR)
     os.makedirs(OUTPUT_DIR)
+
+    # Preserve CNAME file
+    if os.path.exists("CNAME"):
+        shutil.copy("CNAME", os.path.join(OUTPUT_DIR, "CNAME"))
+
+    # Copy static assets
+    if os.path.exists(ASSETS_SRC):
+        shutil.copytree(ASSETS_SRC, ASSETS_DEST)
 
 def slugify(title):
     return title.lower().replace(" ", "-").replace(",", "").replace("'", "").replace(".", "").replace("?", "")
