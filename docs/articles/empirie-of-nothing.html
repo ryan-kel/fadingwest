@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>empirie-of-nothing | Fading West</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <style>
     body {
       margin: 0;
@@ -23,6 +24,7 @@
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
     .nav a {
       margin-left: 1.5rem;
@@ -32,6 +34,13 @@
     }
     .nav a:hover {
       text-decoration: underline;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+    }
+    .nav-brand img {
+      height: 36px;
     }
     main {
       max-width: 720px;
@@ -50,7 +59,9 @@
 <body>
   <header>
     <div class="nav">
-      <div><strong>Fading West</strong></div>
+      <a href="/index.html" class="nav-brand">
+        <img src="/assets/logo-full.png" alt="Fading West">
+      </a>
       <nav>
         <a href="/index.html">Home</a>
         <a href="/about.html">About</a>
