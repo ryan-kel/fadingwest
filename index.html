@@ -2,33 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fading West</title>
   <style>
     body {
+      margin: 0;
+      padding: 0;
       font-family: Georgia, serif;
-      margin: 2rem;
-      max-width: 800px;
-      line-height: 1.6;
+      background-color: #fdfdfd;
       color: #222;
-      background: #f8f8f8;
+      line-height: 1.6;
     }
+
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 1rem 2rem;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 1.5rem;
+      font-weight: 500;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
     h1 {
-      color: #444;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
     }
+
+    .intro {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .article-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .article-item {
+      margin-bottom: 2rem;
+    }
+
+    .article-item h2 {
+      margin-bottom: 0.3rem;
+      font-size: 1.5rem;
+    }
+
+    .article-item a {
+      text-decoration: none;
+      color: #1a0dab;
+    }
+
+    .article-item a:hover {
+      text-decoration: underline;
+    }
+
     footer {
-      margin-top: 4rem;
+      text-align: center;
       font-size: 0.9rem;
-      color: #666;
+      color: #888;
+      padding: 2rem 1rem;
+      border-top: 1px solid #e0e0e0;
+      margin-top: 4rem;
     }
   </style>
 </head>
 <body>
-  <h1>Fading West</h1>
-  <p>The west is fading and we must confront it.</p>
+
+  <header>
+    <div class="nav">
+      <div><strong>Fading West</strong></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="articles/index.html">Archive</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Welcome to Fading West</h1>
+    <p class="intro">
+       civilizational uncertainty.
+    </p>
+
+    <ul class="article-list">
+      <li class="article-item">
+        <h2><a href="articles/liberty-and-order.html">Liberty and Order in an Unsettled Age</a></h2>
+        <p>A reflection on the tension between freedom and the moral structure necessary to sustain it.</p>
+      </li>
+      <li class="article-item">
+        <h2><a href="articles/technocracy-and-tradition.html">Technocracy and the Soul of Man</a></h2>
+        <p>What is lost when we trade human judgment for algorithmic efficiency?</p>
+      </li>
+      <li class="article-item">
+        <h2><a href="articles/against-an-empire-of-nothing.html">Against an Empire of Nothing</a></h2>
+        <p>On the quiet spiritual crisis behind modern political paralysis.</p>
+      </li>
+    </ul>
+  </main>
 
   <footer>
-    &copy; 2025 Ryan | fadingwest.net
+    &copy; 2025 | fadingwest.net
   </footer>
+
 </body>
 </html>
